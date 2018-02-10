@@ -1,0 +1,93 @@
+pushd () {
+  command pushd "$@" > /dev/null
+}
+
+popd () {
+  command popd "$@" > /dev/null
+}
+
+Black='\033[0;30m'
+Red='\033[0;31m'
+Green='\033[0;32m'
+Yellow='\033[0;33m'
+Cyan='\033[0;36m'
+Purple='\033[0;35m'
+White='\033[0;37m'
+
+BBlack='\033[1;30m'
+BRed='\033[1;31m'
+BGreen='\033[1;32m'
+BYellow='\033[1;33m'
+BCyan='\033[1;36m'
+BPurple='\033[1;35m'
+BWhite='\033[1;37m'
+
+On_Black='\033[40m'
+On_Red='\033[41m'
+On_Green='\033[42m'
+On_Yellow='\033[43m'
+On_Blue='\033[44m'
+On_Purple='\033[45m'
+On_Cyan='\033[46m'
+On_White='\033[47m'
+
+NC='\033[0m'
+
+_done() {
+  echo -e "${BGreen}Done$NC"
+}
+
+_success() {
+  echo -e "${BGreen}Success$NC"
+}
+
+_fail() {
+  echo -e "${Red}Fail${NC}"
+}
+
+_yellow() {
+  echo -en "${Yellow}$*$NC"
+}
+_yellowb() {
+  echo -en "${BYellow}$*$NC"
+}
+_green() {
+  echo -en "${Green}$*$NC"
+}
+_greenb() {
+  echo -en "${BGreen}$*$NC"
+}
+_bgwhite() {
+  echo -en "\033[1;47;107m$*$NC"
+}
+_bglblue() {
+  echo -en "\033[1;41;104m$*$NC"
+}
+_bgred() {
+  echo -en "\033[1;41;37m$*$NC"
+}
+_bgpurple() {
+  echo -en "\033[1;45;37m$*$NC"
+}
+
+_title() {
+  echo
+  echo -en "\033[1;35;107m ▶︎ $NC\033[1;45;37m   $*   $NC"
+  echo
+}
+
+_install() {
+  echo
+  echo -e "$(_greenb ✚\ )\033[1;34;107m  Install  ${NC}$(_bglblue \ $*\ )"
+  echo
+}
+
+_warn() {
+  echo
+  echo "$(_greenb ☞ ☞ ☞) $(_bgred \ $*\ )"
+  echo
+}
+
+_bluedelim() {
+  for i in {16..21} {21..16} ; do echo -en "\033[38;5;${i}m#\033[0m" ; done ; echo
+}

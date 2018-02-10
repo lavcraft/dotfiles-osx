@@ -1,0 +1,15 @@
+#!/bin/bash
+
+CURDIR=$(dirname $BASH_SOURCE)
+source $CURDIR/../.functions
+
+cat ~/.zshrc | grep 'source ~/.bash_profile'
+retval=$?
+if [ ! $retval -eq 0 ];
+then
+  _yellowb 'customize ~/.zshrc\n'
+  echo 'source ~/.bash_profile' >> ~/.zshrc
+  _greenb 'append source ~/.bash_profile to ~/.zshrc\n'
+else
+  _warn 'source ~/.bash_profile already added to .zshrc'
+fi
