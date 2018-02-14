@@ -8,6 +8,8 @@ set -e -o pipefail
 _title 'Install software'
 
 TARGET=(
+  fd
+  ripgrep
   openvpn
   zsh
   ansible
@@ -23,6 +25,7 @@ TARGET=(
   tree
   vim
   wget
+  httpie
   jq
   reattach-to-user-namespace
 )
