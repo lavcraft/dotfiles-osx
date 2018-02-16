@@ -149,8 +149,6 @@ if [ -n "$TMUX_PANE" ]; then
     fi
   }
 
-  # Bind CTRL-X-CTRL-T to tmuxwords.sh
-  bind '"\C-x\C-t": "$(fzf_tmux_words)\e\C-e\er"'
 fi
 
 # Switch tmux-sessions

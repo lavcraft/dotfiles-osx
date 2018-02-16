@@ -95,3 +95,6 @@ source $ZSH/oh-my-zsh.sh
 source ~/.bash_profile
 source ~/.scripts
 source ~/.aliases
+source ~/.keyrebinder
+source ~/.fzf.completion.zsh
+source ~/.fzf.bindings.zsh
