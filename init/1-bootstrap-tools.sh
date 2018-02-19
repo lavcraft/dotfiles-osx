@@ -28,6 +28,7 @@ TARGET=(
   httpie
   jq
   reattach-to-user-namespace
+  neovim
 )
 for i in ${TARGET[@]};do
   _install $i

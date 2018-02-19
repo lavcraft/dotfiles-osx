@@ -98,3 +98,5 @@ source ~/.aliases
 source ~/.keyrebinder
 source ~/.fzf.completion.zsh
 source ~/.fzf.bindings.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
