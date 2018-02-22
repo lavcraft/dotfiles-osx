@@ -1,6 +1,7 @@
 #!/bin/bash
 
-cd $(dirname $BASH_SOURCE)
+SOURCEDIR=$(dirname $BASH_SOURCE)
+pushd $SOURCEDIR
 BASE=$(pwd)
 
 export GIT_SSL_NO_VERIFY=true
@@ -17,3 +18,5 @@ ln -sf $BASE/vimrc ~/.config/nvim/init.vim
 ln -sf ~/.vim/autoload/plug.vim ~/.config/nvim/autoload/
 
 nvim +PlugInstall +qall
+
+popd
