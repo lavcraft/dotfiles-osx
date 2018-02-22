@@ -2,7 +2,7 @@
 
 set -o pipefail -e
 CURDIR=$(dirname $BASH_SOURCE)
-source $CURDIR/../.functions
+source $CURDIR/.functions
 
 _title 'Configure machine from scratch...'
 

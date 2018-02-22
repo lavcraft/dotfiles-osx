@@ -3,7 +3,7 @@
 CURDIR=$(dirname $BASH_SOURCE)
 source $CURDIR/../.functions
 source ~/.sdkman/bin/sdkman-init.sh
-set -e -o pipefail
+set +e -o pipefail
 
 _title 'Install software'
 
