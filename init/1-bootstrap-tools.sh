@@ -42,7 +42,8 @@ TARGET=(
   tunnelblick
   jetbrains-toolbox
   docker-toolbox
-  postman  
+  postman
+  vlc
 )
 for i in ${TARGET[@]};do
   _install $i
