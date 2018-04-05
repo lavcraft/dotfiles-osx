@@ -44,6 +44,7 @@ TARGET=(
   docker-toolbox
   postman
   vlc
+  visual-studio-code
 )
 for i in ${TARGET[@]};do
   _install $i
