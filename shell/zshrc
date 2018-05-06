@@ -97,6 +97,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH=~/.bin:$PATH
 source ~/.bash_profile
 source ~/.scripts
+source ~/.scripts.tmux
 source ~/.aliases
 source ~/.keyrebinder
 source ~/.fzf.completion.zsh
