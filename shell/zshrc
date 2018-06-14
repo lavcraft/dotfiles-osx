@@ -104,3 +104,6 @@ source ~/.fzf.completion.zsh
 source ~/.fzf.bindings.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Init SDKMAN if possible
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
