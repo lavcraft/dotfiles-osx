@@ -62,7 +62,7 @@ TARGET=(
 )
 for i in ${TARGET[@]};do
   _install "Install $i"
-  sdk install $i
+  sdk install $i < /dev/null
 done
 
 echo
