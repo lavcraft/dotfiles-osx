@@ -43,6 +43,7 @@ TARGET=(
   tunnelblick
   jetbrains-toolbox
   docker-toolbox
+  docker
   postman
   vlc
   visual-studio-code
