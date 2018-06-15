@@ -29,6 +29,7 @@ TARGET=(
   jq
   reattach-to-user-namespace
   neovim
+  cloudfoundry/tap/cf-cli
 )
 for i in ${TARGET[@]};do
   _install $i
