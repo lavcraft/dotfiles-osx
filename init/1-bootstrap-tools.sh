@@ -45,6 +45,7 @@ TARGET=(
   postman
   vlc
   visual-studio-code
+  telegram
 )
 for i in ${TARGET[@]};do
   _install $i
