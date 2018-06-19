@@ -30,6 +30,7 @@ TARGET=(
   reattach-to-user-namespace
   neovim
   cloudfoundry/tap/cf-cli
+  shellcheck
 )
 for i in ${TARGET[@]};do
   _install $i

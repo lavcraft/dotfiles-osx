@@ -5,8 +5,8 @@ ZSH_THEME="robbyrussell"
 plugins=(tmux git ssh-agent)
 
 # zstyle :omz:plugins:ssh-agent agent-forwarding on
-zstyle :omz:plugins:ssh-agent identities id_rsa github c_gitlab
-zstyle :omz:plugins:ssh-agent lifetime 4h
+zstyle :omz:plugins:ssh-agent identities id_rsa github c_gitlab c_servers_dev
+zstyle :omz:plugins:ssh-agent lifetime 36h
 
 source $ZSH/oh-my-zsh.sh
 
