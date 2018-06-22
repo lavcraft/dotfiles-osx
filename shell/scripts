@@ -246,3 +246,16 @@ fcs() {
 }
 ################################################################ FZF-GIT ##
 
+#### DOCKER ###############################################################
+docker.latest() {
+  echo $(docker ps -q | head -1)
+}
+
+docker.latest.port() {
+  echo $(docker port $(docker.latest) | grep tcp | head -1 | cut -d':' -f2)
+}
+
+docker.latest.open.http() {
+  open "http://localhost:$(docker.latest.port)"
+}
+################################################################ DOCEKR ###
