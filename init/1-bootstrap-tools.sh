@@ -31,6 +31,8 @@ TARGET=(
   neovim
   cloudfoundry/tap/cf-cli
   shellcheck
+  ag
+  nvm
 )
 for i in ${TARGET[@]};do
   _install $i

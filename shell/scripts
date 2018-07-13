@@ -258,4 +258,12 @@ docker.latest.port() {
 docker.latest.open.http() {
   open "http://localhost:$(docker.latest.port)"
 }
+
+docker.latest.bash() {
+  docker exec -it $(docker.latest) bash
+}
+
+docker.latest.sh() {
+  docker exec -it $(docker.latest) bash
+}
 ################################################################ DOCEKR ###

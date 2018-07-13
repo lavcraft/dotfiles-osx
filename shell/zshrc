@@ -5,7 +5,7 @@ ZSH_THEME="robbyrussell"
 plugins=(tmux git ssh-agent)
 
 # zstyle :omz:plugins:ssh-agent agent-forwarding on
-zstyle :omz:plugins:ssh-agent identities id_rsa github c_gitlab c_servers_dev
+zstyle :omz:plugins:ssh-agent identities id_rsa github c_gitlab c_servers_dev c_bitbucket
 zstyle :omz:plugins:ssh-agent lifetime 36h
 
 source $ZSH/oh-my-zsh.sh
@@ -31,6 +31,10 @@ source ~/.keyrebinder
 source ~/.fzf.completion.zsh
 source ~/.fzf.bindings.zsh
 
+# Configure NVM
+export NVM_DIR=~/.nvm
+source /usr/local/opt/nvm/nvm.sh
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Init SDKMAN if possible
@@ -41,3 +45,4 @@ source ~/.fzf.bindings.zsh
 # then
 #     tmux attach -t TMUX || tmux new -s TMUX
 # fi
+
