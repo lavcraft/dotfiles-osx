@@ -51,6 +51,7 @@ TARGET=(
   vlc
   visual-studio-code
   telegram
+  chromium
 )
 for i in ${TARGET[@]};do
   _install $i
