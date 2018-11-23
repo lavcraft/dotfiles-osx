@@ -66,19 +66,16 @@ export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap 
 command -v blsd > /dev/null && export FZF_ALT_C_COMMAND='blsd $dir'
 command -v tree > /dev/null && export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 
-# Search by content and open file in vi
-#  - vg search_content
+# fuzzy grep open via ag with line number
 vg() {
   local file
+  local line
 
-  file="$(ag --nobreak --noheading $@ | fzf -0 -1 | awk -F: '{print $2 "|" $1}')"
-
-  fileName=$(echo $file | cut -d'|' -f2)
-  lineInFile=$(echo $file | cut -d'|' -f1)
+  read -r file line <<<"$(ag --nobreak --noheading $@ | fzf -0 -1 | awk -F: '{print $1, $2}')"
 
   if [[ -n $file ]]
   then
-     vi "+$lineInFile" $fileName
+     vim $file +$line
   fi
 }
 
