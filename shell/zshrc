@@ -47,3 +47,6 @@ source /usr/local/opt/nvm/nvm.sh
 #     tmux attach -t TMUX || tmux new -s TMUX
 # fi
 
+
+# added by travis gem
+[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh

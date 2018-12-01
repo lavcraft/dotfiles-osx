@@ -8,6 +8,7 @@ set +e -o pipefail
 _title 'Install software'
 
 TARGET=(
+  bat
   fd
   ripgrep
   openvpn
