@@ -53,6 +53,7 @@ TARGET=(
   visual-studio-code
   telegram
   chromium
+  airflow
 )
 for i in ${TARGET[@]};do
   _install $i
