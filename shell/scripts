@@ -280,4 +280,24 @@ docker.latest.bash() {
 docker.latest.sh() {
   docker exec -it $(docker.latest) bash
 }
-################################################################ DOCEKR ###
+################################################################ DOCKER ###
+
+#### CF CLI ###############################################################
+cf-ch-space() {
+  local cf_home
+  cf_home=$(find ~/.cf-envs -type d -maxdepth 1 -mindepth 1 -exec basename {} \; \
+    | fzf +m)
+  cf_env_name=$(basename $cf_home)
+  cf_full_home="$HOME/.cf-envs/${cf_env_name}/"
+  tmux new-session -d -s $cf_env_name \; \
+    setenv -t $cf_env_name cf_env "$cf_env_name" \; \
+    setenv -t $cf_env_name CF_HOME "$cf_full_home" \; \
+    send-keys -t $cf_env_name "export CF_HOME=$cf_full_home" C-m \;
+    send-keys -t $cf_env_name 'echo "Use CF — Space[$CF_HOME]"' C-m
+    # neww -n "$cf_env_name"
+
+  tmux neww -t "$cf_env_name"
+  tmux kill-window -t "${cf_env_name}:1"
+  tmux switch-client -t "$cf_env_name"
+}
+################################################################ CF CLI ###

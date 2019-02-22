@@ -2,8 +2,8 @@ export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export ZSH=$HOME/.oh-my-zsh
 export LANG=en_US.UTF-8
 
-ZSH_THEME="robbyrussell"
-plugins=(tmux git ssh-agent)
+ZSH_THEME="lavcraft"
+plugins=(tmux git ssh-agent cf)
 
 # zstyle :omz:plugins:ssh-agent agent-forwarding on
 zstyle :omz:plugins:ssh-agent identities id_rsa github c_gitlab c_servers_dev c_bitbucket
