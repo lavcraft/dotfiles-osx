@@ -311,8 +311,8 @@ nnoremap g[ :pop<cr>
 nnoremap <C-p> <C-i>
 
 " <F10> | NERD Tree
-nnoremap <F12> :NERDTreeToggle<cr>
-
+nnoremap <Leader>n :NERDTreeToggle<cr>
+nnoremap <Leader>N :NERDTreeFind<cr>
 " <F11> | Tagbar
 if v:version >= 703
   inoremap <F11> <esc>:TagbarToggle<cr>
