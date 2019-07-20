@@ -75,7 +75,7 @@ vg() {
 
   if [[ -n $file ]]
   then
-     vim $file +$line
+     vim "$file" "+$line"
   fi
 }
 
