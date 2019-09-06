@@ -16,4 +16,7 @@ ln -sfv "$PWD/scripts.tmux" $HOME/.scripts.tmux
 _install 'Configure caps-lock as prefix key by hidutil'
 hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x700000043}]}'
 
+_install 'tmux plugins'
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 popd

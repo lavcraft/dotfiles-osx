@@ -34,6 +34,7 @@ TARGET=(
   shellcheck
   ag
   nvm
+  tmux-xpanes
 )
 for i in ${TARGET[@]};do
   _install $i
