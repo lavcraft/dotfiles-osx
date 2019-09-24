@@ -55,6 +55,7 @@ TARGET=(
   telegram
   chromium
   airflow
+  font-cascadia
 )
 for i in ${TARGET[@]};do
   _install $i
