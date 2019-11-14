@@ -1,5 +1,5 @@
-" vim: set foldmethod=marker foldlevel=0 nomodeline:
 " ============================================================================
+" vim: set foldmethod=marker foldlevel=0 nomodeline:
 " .vimrc of Junegunn Choi {{{
 " ============================================================================
 
@@ -92,6 +92,7 @@ augroup nerd_loader
         \|   execute 'autocmd! nerd_loader'
         \| endif
 augroup END
+Plug 'ryanoasis/vim-devicons'
 
 if v:version >= 703
   Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
@@ -171,7 +172,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab smarttab
 set scrolloff=5
-set encoding=utf-8
+set encoding=UTF-8
 set list
 set listchars=tab:\|\ ,
 set virtualedit=block
@@ -184,6 +185,8 @@ set grepformat=%f:%l:%c:%m,%f:%l:%m
 set completeopt=menuone,preview
 set nocursorline
 set nrformats=hex
+set relativenumber
+set number
 silent! set cryptmethod=blowfish2
 
 set formatoptions+=1
@@ -291,10 +294,10 @@ nnoremap <leader>s :update<cr>
 nnoremap <leader>w :update<cr>
 
 " Disable CTRL-A on tmux or on screen
-if $TERM =~ 'screen'
-  nnoremap <C-a> <nop>
-  nnoremap <Leader><C-a> <C-a>
-endif
+" if $TERM =~ 'screen'
+  " nnoremap <C-a> <nop>
+  " nnoremap <Leader><C-a> <C-a>
+" endif
 
 " Quit
 inoremap <C-Q>     <esc>:q<cr>
@@ -308,7 +311,7 @@ nnoremap <C-]> g<C-]>
 nnoremap g[ :pop<cr>
 
 " Jump list (to newer position)
-nnoremap <C-p> <C-i>
+" nnoremap <C-p> <C-i>
 
 " <F10> | NERD Tree
 nnoremap <Leader>n :NERDTreeToggle<cr>

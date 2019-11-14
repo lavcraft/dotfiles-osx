@@ -56,6 +56,7 @@ TARGET=(
   chromium
   airflow
   font-cascadia
+  homebrew/cask-fonts/font-hack-nerd-font
 )
 for i in ${TARGET[@]};do
   _install $i
