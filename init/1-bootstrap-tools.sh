@@ -35,6 +35,7 @@ TARGET=(
   ag
   nvm
   tmux-xpanes
+  httpstat
 )
 for i in ${TARGET[@]};do
   _install $i
@@ -57,6 +58,8 @@ TARGET=(
   airflow
   font-cascadia
   homebrew/cask-fonts/font-hack-nerd-font
+  virtualbox
+  virtualbox-extension-pack
 )
 for i in ${TARGET[@]};do
   _install $i
