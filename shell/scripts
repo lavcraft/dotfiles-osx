@@ -288,6 +288,15 @@ docker.latest.bash() {
 docker.latest.sh() {
   docker exec -it $(docker.latest) sh
 }
+docker.http.open() {
+  local container=$(docker ps --format "{{.ID}}|@{{.Image}}|@{{.Status}}|@{{.Ports}}|@{{.Names}}" | column -s'|' -t | fzf)
+  local ports=$(echo $container | tr -s ' ' | cut -d'@' -f4- | rev | cut -d' ' -f2- | rev | tr ',' '\n' | tr -d ' ')
+  local targetportspec=$(echo $ports | fzf)
+  local targetport=$(echo $targetportspec | cut -d':' -f2 | cut -d'-' -f1)
+  echo "-- $targetportspec"
+
+  open "http://localhost:${targetport}"
+}
 ################################################################ DOCKER ###
 
 #### CF CLI ###############################################################
