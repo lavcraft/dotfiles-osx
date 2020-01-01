@@ -30,7 +30,6 @@ TARGET=(
   jq
   reattach-to-user-namespace
   neovim
-  cloudfoundry/tap/cf-cli
   shellcheck
   ag
   nvm
