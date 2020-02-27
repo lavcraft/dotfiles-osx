@@ -35,6 +35,7 @@ TARGET=(
   nvm
   tmux-xpanes
   httpstat
+  lastpass-cli
 )
 for i in ${TARGET[@]};do
   _install $i
@@ -54,11 +55,14 @@ TARGET=(
   visual-studio-code
   telegram
   chromium
+  google-chrome
   airflow
   font-cascadia
   homebrew/cask-fonts/font-hack-nerd-font
   virtualbox
   virtualbox-extension-pack
+  ilya-birman-typography-layout
+  lastpass
 )
 for i in ${TARGET[@]};do
   _install $i

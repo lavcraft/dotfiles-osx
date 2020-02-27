@@ -3,10 +3,12 @@ export ZSH=$HOME/.oh-my-zsh
 export LANG=en_US.UTF-8
 
 ZSH_THEME="lavcraft"
-plugins=(tmux git ssh-agent cf)
+# ZSH_TMUX_ITERM2=true
+ZSH_TMUX_AUTOSTART=true
+plugins=(tmux git ssh-agent)
 
 # zstyle :omz:plugins:ssh-agent agent-forwarding on
-zstyle :omz:plugins:ssh-agent identities id_rsa github c_gitlab c_servers_dev c_bitbucket
+zstyle :omz:plugins:ssh-agent identities github
 zstyle :omz:plugins:ssh-agent lifetime 36h
 
 source $ZSH/oh-my-zsh.sh

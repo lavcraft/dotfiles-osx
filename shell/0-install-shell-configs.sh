@@ -16,12 +16,14 @@ scripts
 keyrebinder
 )
 
-BIN_SCRIPTS=(ls user-bin-scripts/*)
+BIN_SCRIPTS=$(ls user-bin-scripts/*)
 
 for i in ${SCRIPTS[@]};do
   _install "copy $i to ~/.$i"
   ln -sfv $PWD/$i $HOME/.$i
 done
+
+mkdir -p ~/.bin
 
 for i in ${BIN_SCRIPTS[@]};do
   script_final_name=$(basename $i)

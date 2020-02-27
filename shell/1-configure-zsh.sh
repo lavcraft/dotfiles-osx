@@ -9,7 +9,7 @@ pushd $CURDIR
 
 _title 'Configure zsh and oh-my-zsh'
 
-if [ ! -d "$HOME/.oh-my-zsh/plugins" ]; then
+if [ ! -d "$HOME/.oh-my-zsh/plugins/cf-zsh-autocomplete-plugin" ]; then
   _install 'oh-my-zsh cf plugin'
   pushd ~/.oh-my-zsh/plugins
   git clone https://github.com/dannyzen/cf-zsh-autocomplete-plugin.git cf
