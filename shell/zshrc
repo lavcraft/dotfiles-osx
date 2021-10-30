@@ -8,7 +8,7 @@ ZSH_TMUX_AUTOSTART=true
 plugins=(tmux git ssh-agent)
 
 # zstyle :omz:plugins:ssh-agent agent-forwarding on
-zstyle :omz:plugins:ssh-agent identities github
+zstyle :omz:plugins:ssh-agent identities github gitlab jrg_mc
 zstyle :omz:plugins:ssh-agent lifetime 36h
 
 source $ZSH/oh-my-zsh.sh
@@ -30,6 +30,11 @@ source ~/.fzf.bindings.zsh
 export NVM_DIR=~/.nvm
 source /usr/local/opt/nvm/nvm.sh
 
+# Configure kubernetes tools
+source <(kubectl completion zsh)
+source <(bash completion zsh)
+source <(argo completion zsh)
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Init SDKMAN if possible
@@ -45,3 +50,6 @@ source /usr/local/opt/nvm/nvm.sh
 #   export EDITOR='mvim'
 # fi
 
+
+# The next line updates PATH for Yandex Cloud CLI.
+source "/usr/local/Caskroom/yandex-cloud-cli/latest/yandex-cloud-cli/completion.zsh.inc"

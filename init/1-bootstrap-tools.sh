@@ -36,6 +36,9 @@ TARGET=(
   tmux-xpanes
   httpstat
   lastpass-cli
+  kubectl
+  helm
+  exa
 )
 for i in ${TARGET[@]};do
   _install $i
@@ -46,11 +49,8 @@ done
 TARGET=(
   iterm2
   slack
-  tunnelblick
   jetbrains-toolbox
-  docker-toolbox
-  docker
-  postman
+  podman
   vlc
   visual-studio-code
   telegram
@@ -63,10 +63,11 @@ TARGET=(
   virtualbox-extension-pack
   ilya-birman-typography-layout
   lastpass
+  yandex-cloud-cli
 )
 for i in ${TARGET[@]};do
   _install $i
-  brew cask install $i
+  brew install --cask $i
   _success $i
 done
 
