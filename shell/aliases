@@ -1,3 +1,4 @@
 alias gw='$PWD/gradlew'
 alias vi='nvim'
 alias ls='exa'
+alias docker='podman'

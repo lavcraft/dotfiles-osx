@@ -8,6 +8,7 @@ set +e -o pipefail
 _title 'Install software'
 
 TARGET=(
+  bash-completion
   bat
   fd
   ripgrep
@@ -39,6 +40,7 @@ TARGET=(
   kubectl
   helm
   exa
+  podman
 )
 for i in ${TARGET[@]};do
   _install $i
@@ -50,7 +52,6 @@ TARGET=(
   iterm2
   slack
   jetbrains-toolbox
-  podman
   vlc
   visual-studio-code
   telegram
