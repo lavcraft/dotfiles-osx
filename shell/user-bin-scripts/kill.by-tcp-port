@@ -2,7 +2,7 @@
 
 echo "Select process to kill"
 
-$TARGET_PORT=$1
+$TARGET_PORT=${1:-8080}
 
 app=$(lsof -i tcp:$1 | tail -n +2 | fzf +m)
 
