@@ -1,7 +1,0 @@
-#!/bin/bash
-
-app=$(cf apps | grep -e '\/\d' | cut -d' ' -f1 | fzf +m)
-
-echo "Found $app. Try connect to $app mongodb"
-docker run -it --net=host mongo mongo $(cf env $app | grep mongo | grep uri | cut -d':' -f2-100 | tr -s '"' ' ' | tr -s ' ')
-

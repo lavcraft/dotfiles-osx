@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "Select process to kill"
+
+$TARGET_PORT=$1
+
+app=$(lsof -i tcp:$1 | fzf +m)
+
+if [ -z $app ]
+then
+  echo "do nothing"
+  exit 0
+else
+  echo "Killing process: [$app]"
+  kill $(echo $app | tr -s ' ' | cut -d' ' -f2)
+fi

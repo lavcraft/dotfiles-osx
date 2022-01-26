@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "Select process to kill"
+
+app=$(ps xua | fzf +m)
+
+if [ -z $app ]
+then
+  echo "do nothing"
+  exit 0
+else
+  echo "Killing process $app"
+  kill $(echo $app | tr -s ' ' | cut -d' ' -f2)
+fi
