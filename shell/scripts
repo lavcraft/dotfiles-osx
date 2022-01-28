@@ -276,6 +276,14 @@ docker.latest() {
   $DOCKER_CMD ps -q | head -1
 }
 
+docker.get-container-line() {
+  echo $($DOCKER_CMD ps | tail -n +2 | fzf +m)
+}
+
+docker.get-container-id-from-line() {
+  echo $1 | tr -s ' ' | cut -d' ' -f1
+}
+
 docker.latest.port() {
   echo $($DOCKER_CMD port $(docker.latest) | grep tcp | head -1 | cut -d':' -f2)
 }
@@ -294,6 +302,18 @@ docker.latest.bash() {
 
 docker.latest.sh() {
   $DOCKER_CMD exec -it $(docker.latest) sh
+}
+
+docker.sh() {
+  targetContainer=$(docker.get-container-line) 
+  if [ -z $targetContainer ];
+  then
+    echo "Nothing todo. Select container to run /bin/sh inside"
+  else
+    targetContainerId=$(docker.get-container-id-from-line $targetContainer)
+    echo "Running /bin/sh in container $targetContainerId"
+    $DOCKER_CMD exec -it $targetContainerId /bin/sh
+  fi
 }
 
 docker.http.open() {

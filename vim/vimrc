@@ -282,6 +282,8 @@ endif
 
 noremap <C-F> <C-D>
 noremap <C-B> <C-U>
+nnoremap <F3> :set hlsearch!<CR>
+
 
 " Open new line below and above current line
 nnoremap <leader>o o<esc>
