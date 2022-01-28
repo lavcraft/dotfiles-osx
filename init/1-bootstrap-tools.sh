@@ -41,6 +41,7 @@ TARGET=(
   helm
   exa
   podman
+  font-jetbrains-mono-nerd-font
 )
 for i in ${TARGET[@]};do
   _install $i
